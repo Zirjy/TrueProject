@@ -17,10 +17,10 @@ class SiswaController extends Controller
 
     public function index(Request $request) {
         if ($request->search) {
-            $siswa = Siswa::where('task', 'LIKE', 
+            $siswa = Siswa::where('siswa', 'LIKE', 
             "%$request->search%")->get();
         }
-        $siswa = Siswa::paginate(3);
+        $siswa = Siswa::latest()->paginate(3);
         return view('siswa.index' ,[
         'data' => $siswa
     ]);
