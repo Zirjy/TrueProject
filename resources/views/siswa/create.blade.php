@@ -25,7 +25,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">siswa</label>
-                    <textarea class="form-control" id="" rows="3" name="siswa" {{old('user')}}></textarea>
+                    <textarea class="form-control" id="" rows="3" name="siswa" {{old('user')}}>
+                    </textarea>
                     @error('siswa')
                     <span class="text-danger">
                         {{$message}}

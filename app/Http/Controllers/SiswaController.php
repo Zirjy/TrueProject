@@ -38,7 +38,8 @@ class SiswaController extends Controller
         // return $this->taskList;
         Siswa::create([
             'siswa' => $request->siswa,
-            'user' => $request->user
+            'user' => $request->user,
+            
         ]);
         return redirect('/siswas');
     }

@@ -21,6 +21,6 @@ class Guru
         $user = Auth::user();
         if (!$user->role || $user->role !== 'Guru'){
             return redirect('/siswas');
-        }else
+        }
         return $next($request);    }
 }
